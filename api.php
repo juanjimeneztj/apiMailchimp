@@ -16,9 +16,9 @@ $listId = 'ENTER HERE YOUR LIST ID FROM MAILCHIMP';
 
 error_reporting(0);
 
-$Email = (isset($_REQUEST['email'])) ? $_REQUEST['email'] : NULL; // Catch the email address
+$email = (isset($_REQUEST['email'])) ? $_REQUEST['email'] : NULL; // Catch the email address
 
-if ($Email != NULL) {
+if ($email != NULL) {
     try {
         $memberId = md5(strtolower($email));
         $dataCenter = substr($apikey,strpos($apikey,'-')+1);
